@@ -6,14 +6,18 @@ let client = new JSClient('https://pricearchiveapi.gehtsoft.com');
 let instrument = "EURUSD";
 let timeframe = "1m";
 client.GetPricesRange(function (result) {
-    // dates in format "2011-08-16T23:59:00"
-    var from = result.From;
-    var to = result.To;
+    if(result.Code === 0) {
+       // dates in format "2011-08-16T23:59:00"
+       var from = result.From;
+       var to = result.To;
     
-    console.table({"Instrument": instrument, 
-                   "Timeframe": timeframe, 
-                   "From": result.From, 
-                   "To": result.To}
-    );
+       console.table({"Instrument": instrument, 
+                      "Timeframe": timeframe, 
+                      "From": result.From, 
+                      "To": result.To}
+       );
+    } else {
+      console.log(result);
+    }
 
  }, instrument, timeframe);
