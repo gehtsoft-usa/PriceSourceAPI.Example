@@ -8,9 +8,9 @@ let timeframe = "1m";
 // parameter dates in format "2011-08-16 23:59"
 let from = "2009-10-20 15:30";
 let to = "2009-10-20 16:00";
-let precision = 5;
 client.GetPrices(function (result) {
     if(result.History !== null) {
+       var precision = result.History.Precision;
        var bars = result.History.Bars;
        var history = [];
        for (let i = 0; i < bars.length; i++) {

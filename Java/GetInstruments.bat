@@ -1,0 +1,1 @@
+java -cp target/gs-piac-samples-jar-with-dependencies.jar GsPiacSamples.GetInstrumentsApp
