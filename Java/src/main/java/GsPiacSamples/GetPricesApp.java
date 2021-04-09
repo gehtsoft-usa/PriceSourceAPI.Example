@@ -26,6 +26,7 @@ public class GetPricesApp {
         // All dates returned by PriceArchiveClient methods are in UTC
         //
         Calendar mCalendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+        mCalendar.clear();
         mCalendar.set(Calendar.YEAR, 2009);
         mCalendar.set(Calendar.MONTH, Calendar.OCTOBER);
         mCalendar.set(Calendar.DAY_OF_MONTH, 20);
@@ -34,6 +35,7 @@ public class GetPricesApp {
         mCalendar.set(Calendar.SECOND, 0);
         mCalendar.set(Calendar.MILLISECOND, 0);
         Date from = mCalendar.getTime();                
+
         mCalendar.clear();
         mCalendar.set(Calendar.YEAR, 2009);
         mCalendar.set(Calendar.MONTH, Calendar.OCTOBER);
@@ -42,7 +44,7 @@ public class GetPricesApp {
         mCalendar.set(Calendar.MINUTE, 0);
         mCalendar.set(Calendar.SECOND, 0);
         mCalendar.set(Calendar.MILLISECOND, 0);
-        Date to = mCalendar.getTime();
+        Date to = mCalendar.getTime();  
 
         BarCollection history = client.GetBarPrices(instrument, timeframe, from, to);
 
