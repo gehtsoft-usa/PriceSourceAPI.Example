@@ -14,7 +14,7 @@ public class GetRangesApp
 {
     public static void main( String[] args ) throws PriceArchiveException, IOException, ParseException
     {
-        PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
+        PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
         InstrumentRange[] ranges =  client.GetAllRanges();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         AsciiTable at = new AsciiTable();

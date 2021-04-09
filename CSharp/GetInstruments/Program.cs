@@ -7,7 +7,7 @@ namespace GetInstruments
     {
         static void Main(string[] args)
         {
-            PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
+            PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
             string[] instruments = client.GetInstruments();
             foreach(string instrument in instruments)
             {

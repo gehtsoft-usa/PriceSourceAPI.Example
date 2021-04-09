@@ -1,7 +1,7 @@
 // Get all ranges (info about all instruments with available timeframes and ranges)
 
 let JSClient = require('./node_modules/price-archive/Gehtsoft.PriceArchive.JSClient.min.js');
-let client = new JSClient('https://pricearchiveapi.gehtsoft.com');
+let client = new JSClient('https://pricearchive-fxcm-api.gehtsoft.com');
 
 client.GetAllRanges(function (result) {
   if (typeof result.Ranges !== 'undefined' && result.Ranges !== null && result.Ranges.length > 0) {

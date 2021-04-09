@@ -8,7 +8,7 @@ namespace GetAllRanges
     {
         static void Main(string[] args)
         {
-            PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
+            PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
             PriceArchiveClient.InstrumentRange[] ranges = client.GetAllRanges();
             if(ranges != null)
             {

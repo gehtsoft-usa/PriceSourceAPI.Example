@@ -1,7 +1,7 @@
 // Get all available instruments
 
 let JSClient = require('./node_modules/price-archive/Gehtsoft.PriceArchive.JSClient.min.js');
-let client = new JSClient('https://pricearchiveapi.gehtsoft.com');
+let client = new JSClient('https://pricearchive-fxcm-api.gehtsoft.com');
 
 client.GetInstruments(function (result) {
    if (typeof result.Instruments !== 'undefined' && result.Instruments !== null && result.Instruments.length > 0) {

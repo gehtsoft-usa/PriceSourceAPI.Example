@@ -14,7 +14,7 @@ import java.text.DateFormat;
 public class GetPricesRangeApp {
     public static void main( String[] args ) throws PriceArchiveException, IOException, ParseException
     {
-        PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
+        PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
         String instrument = "EURUSD";
         Timeframe timeframe = Timeframe.OneMinute;
         Range range =  client.GetPricesRange(instrument, timeframe);

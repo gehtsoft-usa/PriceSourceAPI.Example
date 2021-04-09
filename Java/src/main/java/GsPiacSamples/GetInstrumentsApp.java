@@ -7,7 +7,7 @@ public class GetInstrumentsApp
 {
     public static void main( String[] args ) throws PriceArchiveException, IOException
     {
-        PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
+        PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
         String[] instruments = client.GetInstruments();
         System.out.println( "Available instruments:");
         for (int i = 0; i < instruments.length; i++) {
