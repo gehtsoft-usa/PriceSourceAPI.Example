@@ -25,7 +25,8 @@ public class GetPricesApp {
         //
         // All dates returned by PriceArchiveClient methods are in UTC
         //
-        Calendar mCalendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+        TimeZone timezone = TimeZone.getTimeZone("UTC");
+        Calendar mCalendar = Calendar.getInstance(timezone);
         mCalendar.clear();
         mCalendar.set(Calendar.YEAR, 2009);
         mCalendar.set(Calendar.MONTH, Calendar.OCTOBER);
@@ -54,6 +55,8 @@ public class GetPricesApp {
         DecimalFormat decimalFormat = new DecimalFormat(decimalFormatStr);
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        dateFormat.setTimeZone(timezone);
+
         AsciiTable at = new AsciiTable();
         TA_Grid myGrid = TA_Grid.create("grid using UTF-8 light border characters")
                 .addCharacterMap(TA_GridConfig.RULESET_NORMAL, ' ', '-', '|', '+', '+', '+', '+', '+', '+', '+', '+', '+');
