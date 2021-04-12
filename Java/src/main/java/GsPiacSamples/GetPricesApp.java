@@ -23,29 +23,15 @@ public class GetPricesApp {
         String instrument = "EURUSD";
         Timeframe timeframe = Timeframe.OneMinute;
         //
-        // All dates returned by PriceArchiveClient methods are in UTC
+        // All dates (parameters and returned by PriceArchiveClient methods) are in UTC
         //
         TimeZone timezone = TimeZone.getTimeZone("UTC");
-        Calendar mCalendar = Calendar.getInstance(timezone);
-        mCalendar.clear();
-        mCalendar.set(Calendar.YEAR, 2009);
-        mCalendar.set(Calendar.MONTH, Calendar.OCTOBER);
-        mCalendar.set(Calendar.DAY_OF_MONTH, 20);
-        mCalendar.set(Calendar.HOUR, 15);
-        mCalendar.set(Calendar.MINUTE, 30);
-        mCalendar.set(Calendar.SECOND, 0);
-        mCalendar.set(Calendar.MILLISECOND, 0);
-        Date from = mCalendar.getTime();                
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        dateFormat.setTimeZone(timezone);
 
-        mCalendar.clear();
-        mCalendar.set(Calendar.YEAR, 2009);
-        mCalendar.set(Calendar.MONTH, Calendar.OCTOBER);
-        mCalendar.set(Calendar.DAY_OF_MONTH, 20);
-        mCalendar.set(Calendar.HOUR, 16);
-        mCalendar.set(Calendar.MINUTE, 0);
-        mCalendar.set(Calendar.SECOND, 0);
-        mCalendar.set(Calendar.MILLISECOND, 0);
-        Date to = mCalendar.getTime();  
+        Date from = dateFormat.parse("2009-10-20 15:30");                
+        Date to = dateFormat.parse("2009-10-20 16:00");                
+
 
         BarCollection history = client.GetBarPrices(instrument, timeframe, from, to);
 
@@ -53,9 +39,6 @@ public class GetPricesApp {
         String decimalFormatStr = "0.";
         for(int i=0; i < precision; i++) decimalFormatStr += "0";
         DecimalFormat decimalFormat = new DecimalFormat(decimalFormatStr);
-
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        dateFormat.setTimeZone(timezone);
 
         AsciiTable at = new AsciiTable();
         TA_Grid myGrid = TA_Grid.create("grid using UTF-8 light border characters")
