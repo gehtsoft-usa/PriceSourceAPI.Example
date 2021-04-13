@@ -30,6 +30,11 @@ public class GetPricesApp {
 
         BarCollection history = client.GetBarPrices(instrument, timeframe, from, to);
 
+        if (history == null) {
+            System.out.println("No data for " +  instrument + " " + timeframe.toString() + " from " + dateFormat.format(from) + " to " + dateFormat.format(to));
+            return;
+        }
+
         int precision = history.getPrecision();
         String decimalFormatStr = "0.";
         for(int i=0; i < precision; i++) decimalFormatStr += "0";
