@@ -22,12 +22,7 @@ public class GetPricesApp {
         PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
         String instrument = "EURUSD";
         Timeframe timeframe = Timeframe.OneMinute;
-        //
-        // All dates (parameters and returned by PriceArchiveClient methods) are in UTC
-        //
-        TimeZone timezone = TimeZone.getTimeZone("UTC");
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        dateFormat.setTimeZone(timezone);
 
         Date from = dateFormat.parse("2009-10-20 15:30");                
         Date to = dateFormat.parse("2009-10-20 16:00");                
