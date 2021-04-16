@@ -10,7 +10,7 @@ namespace GetPricesRange
         {
             string instrument = "EURUSD";
             Timeframe timeframe = Timeframe.OneMinute;
-            PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
+            PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
             PriceArchiveClient.Range range = client.GetPricesRange(instrument, timeframe);
             Console.WriteLine($"Instrument='{instrument}' Timeftrame='{timeframe}' From='{range.From}' To='{range.To}'");
         }

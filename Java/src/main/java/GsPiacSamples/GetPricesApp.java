@@ -19,7 +19,7 @@ import java.text.DecimalFormat;
 public class GetPricesApp {
     public static void main( String[] args ) throws PriceArchiveException, IOException, ParseException
     {
-        PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
+        PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
         String instrument = "EURUSD";
         Timeframe timeframe = Timeframe.OneMinute;
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");

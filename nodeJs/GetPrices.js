@@ -1,7 +1,7 @@
 // Get prices by instrument, timeframe and period
 
 let JSClient = require('./node_modules/price-archive/Gehtsoft.PriceArchive.JSClient.min.js');
-let client = new JSClient('https://pricearchive-fxcm-api.gehtsoft.com');
+let client = new JSClient('https://pricearchiveapi.gehtsoft.com');
 
 let instrument = "EURUSD";
 let timeframe = "1m";

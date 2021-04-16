@@ -12,8 +12,8 @@ namespace GetPrices
             string instrument = "EURUSD";
             Timeframe timeframe = Timeframe.OneMinute;
             DateTime from = new DateTime(2009, 10, 20, 15, 30, 0);
-            DateTime to = new DateTime(2009, 10, 20, 15, 45, 0);
-            PriceArchiveClient client = new PriceArchiveClient("https://pricearchive-fxcm-api.gehtsoft.com");
+            DateTime to = new DateTime(2009, 10, 20, 16, 00, 0);
+            PriceArchiveClient client = new PriceArchiveClient("https://pricearchiveapi.gehtsoft.com");
             BarHistory history = client.GetPrices(instrument, timeframe, from, to) as BarHistory;
             Console.WriteLine($"Instrument='{history.Instrument}' Timeftrame='{history.Timeframe}' Precision='{history.Precision}'");
             ConsoleTable table = new ConsoleTable("Start", "Bid.Open", "Bid.High", "Bid.Low", "Bid.Close", "Volume");
