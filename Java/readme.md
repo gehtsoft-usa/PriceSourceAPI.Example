@@ -3,7 +3,7 @@ PriceHistory Java samples
 Brief
 ==================================================================================
 These sample Java projects show how to do basic operations with the PriceHistory 
-service (https://pricearchive-fxcm-api.gehtsoft.com)
+service (https://pricearchiveapi.gehtsoft.com)
 
 1. GetInstrumentsApp
    This sample shows how to get a list of available instruments. 

@@ -3,7 +3,7 @@ PriceHistory C# samples
 Brief
 ==================================================================================
 These sample C# projects show how to do basic operations with the PriceHistory 
-service (https://pricearchive-fxcm-api.gehtsoft.com)
+service (https://pricearchiveapi.gehtsoft.com)
 
 1. GetInstruments
    This sample shows how to get a list of available instruments. 

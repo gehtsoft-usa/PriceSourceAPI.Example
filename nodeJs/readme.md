@@ -3,7 +3,7 @@ PriceHistory NodeJs samples
 Brief
 ==================================================================================
 These samples show how to do basic operations with the PriceHistory 
-service (https://pricearchive-fxcm-api.gehtsoft.com)
+service (https://pricearchiveapi.gehtsoft.com)
 
 1. GetInstruments.js
    This sample shows how to get a list of available instruments. 
