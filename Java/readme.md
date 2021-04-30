@@ -47,7 +47,7 @@ GetPrices.bat
 
 Documentation 
 ==================================================================================
-http://docs.gehtsoftusa.com/pricesourceapi
+http://docs.gehtsoftusa.com/pricesourceapi/web-content.html#java.html
 
 License
 ==================================================================================
